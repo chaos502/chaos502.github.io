@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>My Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="算数运算符
+
+1.加减乘除运行符
+#include&lt;iostream&gt;
+using namespace std;
+#include&lt;string&gt;
+
+int main() {
+	int a = 2;
+	int b = 3;
+	cout &lt;&lt; &#34;相加 &#34; &lt;&lt; a &#43; b &lt;&lt; endl;
+	cout &lt;&lt; &#34;相减 &#34; &lt;&lt; a - b &lt;&lt; endl;
+	cout &lt;&lt; &#34;相乘 &#34; &lt;&lt; a * b &lt;&lt; endl;
+	cout &lt;&lt; &#34;相除 &#34; &lt;&lt; a / b &lt;&lt;endl;//由于原先两个变量为整型，结果也为整型，取小数点前的数
+
+	int a2 = 4;
+	int b2 = 3;
+	cout &lt;&lt; &#34;相除 &#34; &lt;&lt; a2 / b2 &lt;&lt; endl;//结果取小数点前的数
+
+	double a3 = 1.5;
+	double b3 = 0.2;
+	cout &lt;&lt; &#34;相除&#34; &lt;&lt; a3 / b3 &lt;&lt; endl//结果为double浮点型
+	
+	/*一般来说，两个不同类型的变量加减乘除，结果的变量是一个可以兼容运算的两个变量。*/
+	float a4=3.5;long b4=23;这两个数相加减乘除，是一个float类型*/
+	
+	system(&#34;pause&#34;);
+	return 0;
+}  
+运行结果
+
+2.取模运算 %
+这是一个很有用的运算，就是取余数。注意，只有整型变量才可以取模运算！
+int a=4;
+int b=3;
+cout&lt;&lt;a%b&lt;&lt;endl;//得到余数1
+cout&lt;&lt;b%a&lt;&lt;endl;//得到余数3
+3.递增运算符
+&#43;&#43;就是&#43;1，&ndash;就是-1
+int a=2;
+cout&lt;&lt;a&#43;&#43;;//输出2，先输出a，再对a&#43;1
+cout&lt;&lt;a--;//输出2，先输出a，再对a-1
+cout&lt;&lt;&#43;&#43;a;//输出3，先对a&#43;1，再输出a
+cout&lt;&lt;--a;//输出1，先对a-1, 再输出a
+4.赋值运算符
+注意它的运算方式是从右到左！
+
+
+代码中的=与数学里的=不同，c&#43;&#43;中“=”是一个值赋给某个变量
+
+int a=10;//赋予一个变量初始值10
+a=9;//将9赋给a
+cout&lt;&lt;a;//输出结果为9
+
+&ldquo;&#43;=&ldquo;将值加赋给变量
+
+int a=10;
+a&#43;=2;//意思就是a=a&#43;2
+cout&lt;&lt;a;//得到12
+
+&ldquo;-=&quot;、&rdquo;*=&quot;、&rdquo;%=&quot;、&rdquo;/=&ldquo;都同&rdquo;&#43;=&quot;
+
+5.比较运算符
+
+这些运算符算一个判断，返回值是0或1，就是真还是假。记住0代表假，1代表真
+6.逻辑运算符
+">
+<meta name="author" content="chaos502">
+<link rel="canonical" href="https://chaos502.github.io/posts/c&#43;&#43;%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B05%E8%BF%90%E7%AE%97%E7%AC%A6/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.50e33a3bfd457e74989d85a3eafc60ffa1869fc30bfd1531de225802f011bee1.css" integrity="sha256-UOM6O/1FfnSYnYWj6vxg/6GGn8ML/RUx3iJYAvARvuE=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://chaos502.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://chaos502.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://chaos502.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://chaos502.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://chaos502.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://chaos502.github.io/posts/c&#43;&#43;%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B05%E8%BF%90%E7%AE%97%E7%AC%A6/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://chaos502.github.io/posts/c&#43;&#43;%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B05%E8%BF%90%E7%AE%97%E7%AC%A6/">
+  <meta property="og:site_name" content="My Blog">
+  <meta property="og:title" content="My Blog">
+  <meta property="og:description" content="算数运算符 1.加减乘除运行符 #include&lt;iostream&gt; using namespace std; #include&lt;string&gt; int main() { int a = 2; int b = 3; cout &lt;&lt; &#34;相加 &#34; &lt;&lt; a &#43; b &lt;&lt; endl; cout &lt;&lt; &#34;相减 &#34; &lt;&lt; a - b &lt;&lt; endl; cout &lt;&lt; &#34;相乘 &#34; &lt;&lt; a * b &lt;&lt; endl; cout &lt;&lt; &#34;相除 &#34; &lt;&lt; a / b &lt;&lt;endl;//由于原先两个变量为整型，结果也为整型，取小数点前的数 int a2 = 4; int b2 = 3; cout &lt;&lt; &#34;相除 &#34; &lt;&lt; a2 / b2 &lt;&lt; endl;//结果取小数点前的数 double a3 = 1.5; double b3 = 0.2; cout &lt;&lt; &#34;相除&#34; &lt;&lt; a3 / b3 &lt;&lt; endl//结果为double浮点型 /*一般来说，两个不同类型的变量加减乘除，结果的变量是一个可以兼容运算的两个变量。*/ float a4=3.5;long b4=23;这两个数相加减乘除，是一个float类型*/ system(&#34;pause&#34;); return 0; } 运行结果 2.取模运算 % 这是一个很有用的运算，就是取余数。注意，只有整型变量才可以取模运算！
+int a=4; int b=3; cout&lt;&lt;a%b&lt;&lt;endl;//得到余数1 cout&lt;&lt;b%a&lt;&lt;endl;//得到余数3 3.递增运算符 &#43;&#43;就是&#43;1，–就是-1
+int a=2; cout&lt;&lt;a&#43;&#43;;//输出2，先输出a，再对a&#43;1 cout&lt;&lt;a--;//输出2，先输出a，再对a-1 cout&lt;&lt;&#43;&#43;a;//输出3，先对a&#43;1，再输出a cout&lt;&lt;--a;//输出1，先对a-1, 再输出a 4.赋值运算符 注意它的运算方式是从右到左！ 代码中的=与数学里的=不同，c&#43;&#43;中“=”是一个值赋给某个变量 int a=10;//赋予一个变量初始值10 a=9;//将9赋给a cout&lt;&lt;a;//输出结果为9 “&#43;=“将值加赋给变量 int a=10; a&#43;=2;//意思就是a=a&#43;2 cout&lt;&lt;a;//得到12 “-=&#34;、”*=&#34;、”%=&#34;、”/=“都同”&#43;=&#34; 5.比较运算符 这些运算符算一个判断，返回值是0或1，就是真还是假。记住0代表假，1代表真
+6.逻辑运算符 ">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="算数运算符
+
+1.加减乘除运行符
+#include&lt;iostream&gt;
+using namespace std;
+#include&lt;string&gt;
+
+int main() {
+	int a = 2;
+	int b = 3;
+	cout &lt;&lt; &#34;相加 &#34; &lt;&lt; a &#43; b &lt;&lt; endl;
+	cout &lt;&lt; &#34;相减 &#34; &lt;&lt; a - b &lt;&lt; endl;
+	cout &lt;&lt; &#34;相乘 &#34; &lt;&lt; a * b &lt;&lt; endl;
+	cout &lt;&lt; &#34;相除 &#34; &lt;&lt; a / b &lt;&lt;endl;//由于原先两个变量为整型，结果也为整型，取小数点前的数
+
+	int a2 = 4;
+	int b2 = 3;
+	cout &lt;&lt; &#34;相除 &#34; &lt;&lt; a2 / b2 &lt;&lt; endl;//结果取小数点前的数
+
+	double a3 = 1.5;
+	double b3 = 0.2;
+	cout &lt;&lt; &#34;相除&#34; &lt;&lt; a3 / b3 &lt;&lt; endl//结果为double浮点型
+	
+	/*一般来说，两个不同类型的变量加减乘除，结果的变量是一个可以兼容运算的两个变量。*/
+	float a4=3.5;long b4=23;这两个数相加减乘除，是一个float类型*/
+	
+	system(&#34;pause&#34;);
+	return 0;
+}  
+运行结果
+
+2.取模运算 %
+这是一个很有用的运算，就是取余数。注意，只有整型变量才可以取模运算！
+int a=4;
+int b=3;
+cout&lt;&lt;a%b&lt;&lt;endl;//得到余数1
+cout&lt;&lt;b%a&lt;&lt;endl;//得到余数3
+3.递增运算符
+&#43;&#43;就是&#43;1，&ndash;就是-1
+int a=2;
+cout&lt;&lt;a&#43;&#43;;//输出2，先输出a，再对a&#43;1
+cout&lt;&lt;a--;//输出2，先输出a，再对a-1
+cout&lt;&lt;&#43;&#43;a;//输出3，先对a&#43;1，再输出a
+cout&lt;&lt;--a;//输出1，先对a-1, 再输出a
+4.赋值运算符
+注意它的运算方式是从右到左！
+
+
+代码中的=与数学里的=不同，c&#43;&#43;中“=”是一个值赋给某个变量
+
+int a=10;//赋予一个变量初始值10
+a=9;//将9赋给a
+cout&lt;&lt;a;//输出结果为9
+
+&ldquo;&#43;=&ldquo;将值加赋给变量
+
+int a=10;
+a&#43;=2;//意思就是a=a&#43;2
+cout&lt;&lt;a;//得到12
+
+&ldquo;-=&quot;、&rdquo;*=&quot;、&rdquo;%=&quot;、&rdquo;/=&ldquo;都同&rdquo;&#43;=&quot;
+
+5.比较运算符
+
+这些运算符算一个判断，返回值是0或1，就是真还是假。记住0代表假，1代表真
+6.逻辑运算符
+">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://chaos502.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "",
+      "item": "https://chaos502.github.io/posts/c++%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B05%E8%BF%90%E7%AE%97%E7%AC%A6/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "",
+  "name": "",
+  "description": "算数运算符 1.加减乘除运行符 #include\u0026lt;iostream\u0026gt; using namespace std; #include\u0026lt;string\u0026gt; int main() { int a = 2; int b = 3; cout \u0026lt;\u0026lt; \u0026#34;相加 \u0026#34; \u0026lt;\u0026lt; a + b \u0026lt;\u0026lt; endl; cout \u0026lt;\u0026lt; \u0026#34;相减 \u0026#34; \u0026lt;\u0026lt; a - b \u0026lt;\u0026lt; endl; cout \u0026lt;\u0026lt; \u0026#34;相乘 \u0026#34; \u0026lt;\u0026lt; a * b \u0026lt;\u0026lt; endl; cout \u0026lt;\u0026lt; \u0026#34;相除 \u0026#34; \u0026lt;\u0026lt; a / b \u0026lt;\u0026lt;endl;//由于原先两个变量为整型，结果也为整型，取小数点前的数 int a2 = 4; int b2 = 3; cout \u0026lt;\u0026lt; \u0026#34;相除 \u0026#34; \u0026lt;\u0026lt; a2 / b2 \u0026lt;\u0026lt; endl;//结果取小数点前的数 double a3 = 1.5; double b3 = 0.2; cout \u0026lt;\u0026lt; \u0026#34;相除\u0026#34; \u0026lt;\u0026lt; a3 / b3 \u0026lt;\u0026lt; endl//结果为double浮点型 /*一般来说，两个不同类型的变量加减乘除，结果的变量是一个可以兼容运算的两个变量。*/ float a4=3.5;long b4=23;这两个数相加减乘除，是一个float类型*/ system(\u0026#34;pause\u0026#34;); return 0; } 运行结果 2.取模运算 % 这是一个很有用的运算，就是取余数。注意，只有整型变量才可以取模运算！\nint a=4; int b=3; cout\u0026lt;\u0026lt;a%b\u0026lt;\u0026lt;endl;//得到余数1 cout\u0026lt;\u0026lt;b%a\u0026lt;\u0026lt;endl;//得到余数3 3.递增运算符 ++就是+1，\u0026ndash;就是-1\nint a=2; cout\u0026lt;\u0026lt;a++;//输出2，先输出a，再对a+1 cout\u0026lt;\u0026lt;a--;//输出2，先输出a，再对a-1 cout\u0026lt;\u0026lt;++a;//输出3，先对a+1，再输出a cout\u0026lt;\u0026lt;--a;//输出1，先对a-1, 再输出a 4.赋值运算符 注意它的运算方式是从右到左！ 代码中的=与数学里的=不同，c++中“=”是一个值赋给某个变量 int a=10;//赋予一个变量初始值10 a=9;//将9赋给a cout\u0026lt;\u0026lt;a;//输出结果为9 \u0026ldquo;+=\u0026ldquo;将值加赋给变量 int a=10; a+=2;//意思就是a=a+2 cout\u0026lt;\u0026lt;a;//得到12 \u0026ldquo;-=\u0026quot;、\u0026rdquo;*=\u0026quot;、\u0026rdquo;%=\u0026quot;、\u0026rdquo;/=\u0026ldquo;都同\u0026rdquo;+=\u0026quot; 5.比较运算符 这些运算符算一个判断，返回值是0或1，就是真还是假。记住0代表假，1代表真\n6.逻辑运算符 ",
+  "keywords": [
+    
+  ],
+  "articleBody": "算数运算符 1.加减乘除运行符 #include\u003ciostream\u003e using namespace std; #include\u003cstring\u003e int main() { int a = 2; int b = 3; cout \u003c\u003c \"相加 \" \u003c\u003c a + b \u003c\u003c endl; cout \u003c\u003c \"相减 \" \u003c\u003c a - b \u003c\u003c endl; cout \u003c\u003c \"相乘 \" \u003c\u003c a * b \u003c\u003c endl; cout \u003c\u003c \"相除 \" \u003c\u003c a / b \u003c\u003cendl;//由于原先两个变量为整型，结果也为整型，取小数点前的数 int a2 = 4; int b2 = 3; cout \u003c\u003c \"相除 \" \u003c\u003c a2 / b2 \u003c\u003c endl;//结果取小数点前的数 double a3 = 1.5; double b3 = 0.2; cout \u003c\u003c \"相除\" \u003c\u003c a3 / b3 \u003c\u003c endl//结果为double浮点型 /*一般来说，两个不同类型的变量加减乘除，结果的变量是一个可以兼容运算的两个变量。*/ float a4=3.5;long b4=23;这两个数相加减乘除，是一个float类型*/ system(\"pause\"); return 0; } 运行结果 2.取模运算 % 这是一个很有用的运算，就是取余数。注意，只有整型变量才可以取模运算！\nint a=4; int b=3; cout\u003c\u003ca%b\u003c\u003cendl;//得到余数1 cout\u003c\u003cb%a\u003c\u003cendl;//得到余数3 3.递增运算符 ++就是+1，–就是-1\nint a=2; cout\u003c\u003ca++;//输出2，先输出a，再对a+1 cout\u003c\u003ca--;//输出2，先输出a，再对a-1 cout\u003c\u003c++a;//输出3，先对a+1，再输出a cout\u003c\u003c--a;//输出1，先对a-1, 再输出a 4.赋值运算符 注意它的运算方式是从右到左！ 代码中的=与数学里的=不同，c++中“=”是一个值赋给某个变量 int a=10;//赋予一个变量初始值10 a=9;//将9赋给a cout\u003c\u003ca;//输出结果为9 “+=“将值加赋给变量 int a=10; a+=2;//意思就是a=a+2 cout\u003c\u003ca;//得到12 “-=\"、”*=\"、”%=\"、”/=“都同”+=\" 5.比较运算符 这些运算符算一个判断，返回值是0或1，就是真还是假。记住0代表假，1代表真\n6.逻辑运算符 非运算符“！”可以重复叠加比如 int a=1;//整型类数值0代表假，其余都为真 cout\u003c\u003c!a;//输出假，0 cout\u003c\u003c!!a;//输出真，1 与运算符“\u0026\u0026” 或运算符“||” int a=1; int b=2; int c=2; cout\u003c\u003c(a==b)\u0026\u0026(b==c);//结果为假a不等于b cout\u003c\u003c(b==c)\u0026\u0026a;//结果为真 cout\u003c\u003c(a==b)||(b==c);//结果为真 关于运算符的先后顺序，就先记住\n！\u003e 算术运算符 \u003e \u0026\u0026 \u003e || \u003e比较运算符\u003e 赋值运算符 所以在上面的代码中,要加上括号\n",
+  "wordCount" : "161",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "chaos502"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://chaos502.github.io/posts/c++%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B05%E8%BF%90%E7%AE%97%E7%AC%A6/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://chaos502.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://chaos502.github.io/" accesskey="h" title="My Blog (Alt + H)">My Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://chaos502.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      
+    </h1>
+    <div class="post-meta">1 min&nbsp;·&nbsp;chaos502
+
+</div>
+  </header> 
+  <div class="post-content"><h3 id="算数运算符">算数运算符<a hidden class="anchor" aria-hidden="true" href="#算数运算符">#</a></h3>
+<p><img loading="lazy" src="https://i-blog.csdnimg.cn/blog_migrate/30d0c05a13a07158df3b585f5ff96f99.png"></p>
+<h3 id="1加减乘除运行符">1.加减乘除运行符<a hidden class="anchor" aria-hidden="true" href="#1加减乘除运行符">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">include</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">iostream</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">using</span> <span style="color:#a6e22e">namespace</span> <span style="color:#a6e22e">std</span>;
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">include</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">string</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">cout</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;相加 &#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#a6e22e">endl</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">cout</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;相减 &#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#a6e22e">endl</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">cout</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;相乘 &#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#a6e22e">endl</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">cout</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;相除 &#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">&lt;&lt;</span><span style="color:#a6e22e">endl</span>;<span style="color:#75715e">//由于原先两个变量为整型，结果也为整型，取小数点前的数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a2</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">b2</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">cout</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;相除 &#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#a6e22e">a2</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">b2</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#a6e22e">endl</span>;<span style="color:#75715e">//结果取小数点前的数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">double</span> <span style="color:#a6e22e">a3</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.5</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">double</span> <span style="color:#a6e22e">b3</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.2</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">cout</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;相除&#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#a6e22e">a3</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">b3</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#a6e22e">endl</span><span style="color:#75715e">//结果为double浮点型
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/*一般来说，两个不同类型的变量加减乘除，结果的变量是一个可以兼容运算的两个变量。*/</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">float</span> <span style="color:#a6e22e">a4</span><span style="color:#f92672">=</span><span style="color:#ae81ff">3.5</span>;<span style="color:#66d9ef">long</span> <span style="color:#a6e22e">b4</span><span style="color:#f92672">=</span><span style="color:#ae81ff">23</span>;<span style="color:#a6e22e">这两个数相加减乘除</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">是一个float类型</span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/</span>
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#34;pause&#34;</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}  
+</span></span></code></pre></div><p>运行结果
+<img loading="lazy" src="https://i-blog.csdnimg.cn/blog_migrate/a041ce5c9a3b10715125e81fcbf3fb79.png"></p>
+<h3 id="2取模运算-">2.取模运算 %<a hidden class="anchor" aria-hidden="true" href="#2取模运算-">#</a></h3>
+<p>这是一个很有用的运算，就是取余数。注意，只有整型变量才可以取模运算！</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">b</span><span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cout</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#a6e22e">a</span><span style="color:#f92672">%</span><span style="color:#a6e22e">b</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#a6e22e">endl</span>;<span style="color:#75715e">//得到余数1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">cout</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#a6e22e">b</span><span style="color:#f92672">%</span><span style="color:#a6e22e">a</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#a6e22e">endl</span>;<span style="color:#75715e">//得到余数3
+</span></span></span></code></pre></div><h3 id="3递增运算符">3.递增运算符<a hidden class="anchor" aria-hidden="true" href="#3递增运算符">#</a></h3>
+<p>++就是+1，&ndash;就是-1</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cout</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#a6e22e">a</span><span style="color:#f92672">++</span>;<span style="color:#75715e">//输出2，先输出a，再对a+1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">cout</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#a6e22e">a</span><span style="color:#f92672">--</span>;<span style="color:#75715e">//输出2，先输出a，再对a-1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">cout</span><span style="color:#f92672">&lt;&lt;++</span><span style="color:#a6e22e">a</span>;<span style="color:#75715e">//输出3，先对a+1，再输出a
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">cout</span><span style="color:#f92672">&lt;&lt;--</span><span style="color:#a6e22e">a</span>;<span style="color:#75715e">//输出1，先对a-1, 再输出a
+</span></span></span></code></pre></div><h3 id="4赋值运算符">4.赋值运算符<a hidden class="anchor" aria-hidden="true" href="#4赋值运算符">#</a></h3>
+<h3 id="注意它的运算方式是从右到左">注意它的运算方式是从右到左！<a hidden class="anchor" aria-hidden="true" href="#注意它的运算方式是从右到左">#</a></h3>
+<p><img loading="lazy" src="https://i-blog.csdnimg.cn/blog_migrate/7b400d5096531e878655da0028b2dcc5.png"></p>
+<ul>
+<li>代码中的=与数学里的=不同，c++中“=”是一个值赋给某个变量</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>;<span style="color:#75715e">//赋予一个变量初始值10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>;<span style="color:#75715e">//将9赋给a
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">cout</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#a6e22e">a</span>;<span style="color:#75715e">//输出结果为9
+</span></span></span></code></pre></div><ul>
+<li>&ldquo;+=&ldquo;将值加赋给变量</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">a</span><span style="color:#f92672">+=</span><span style="color:#ae81ff">2</span>;<span style="color:#75715e">//意思就是a=a+2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">cout</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#a6e22e">a</span>;<span style="color:#75715e">//得到12
+</span></span></span></code></pre></div><ul>
+<li>&ldquo;-=&quot;、&rdquo;*=&quot;、&rdquo;%=&quot;、&rdquo;/=&ldquo;都同&rdquo;+=&quot;</li>
+</ul>
+<h3 id="5比较运算符">5.比较运算符<a hidden class="anchor" aria-hidden="true" href="#5比较运算符">#</a></h3>
+<p><img loading="lazy" src="https://i-blog.csdnimg.cn/blog_migrate/83ee5b82542ba54a847addce65e3e45e.png"></p>
+<p>这些运算符算一个判断，返回值是0或1，就是真还是假。记住0代表假，1代表真</p>
+<h3 id="6逻辑运算符">6.逻辑运算符<a hidden class="anchor" aria-hidden="true" href="#6逻辑运算符">#</a></h3>
+<p><img loading="lazy" src="https://i-blog.csdnimg.cn/blog_migrate/81f2040ed6ec3d475c07bf472ab5ac94.png"></p>
+<ul>
+<li>非运算符“！”可以重复叠加比如</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;<span style="color:#75715e">//整型类数值0代表假，其余都为真
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">cout</span><span style="color:#f92672">&lt;&lt;!</span><span style="color:#a6e22e">a</span>;<span style="color:#75715e">//输出假，0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">cout</span><span style="color:#f92672">&lt;&lt;!!</span><span style="color:#a6e22e">a</span>;<span style="color:#75715e">//输出真，1
+</span></span></span></code></pre></div><ul>
+<li>与运算符“&amp;&amp;”</li>
+<li>或运算符“||”</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">b</span><span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">c</span><span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cout</span><span style="color:#f92672">&lt;&lt;</span>(<span style="color:#a6e22e">a</span><span style="color:#f92672">==</span><span style="color:#a6e22e">b</span>)<span style="color:#f92672">&amp;&amp;</span>(<span style="color:#a6e22e">b</span><span style="color:#f92672">==</span><span style="color:#a6e22e">c</span>);<span style="color:#75715e">//结果为假a不等于b
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">cout</span><span style="color:#f92672">&lt;&lt;</span>(<span style="color:#a6e22e">b</span><span style="color:#f92672">==</span><span style="color:#a6e22e">c</span>)<span style="color:#f92672">&amp;&amp;</span><span style="color:#a6e22e">a</span>;<span style="color:#75715e">//结果为真
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">cout</span><span style="color:#f92672">&lt;&lt;</span>(<span style="color:#a6e22e">a</span><span style="color:#f92672">==</span><span style="color:#a6e22e">b</span>)<span style="color:#f92672">||</span>(<span style="color:#a6e22e">b</span><span style="color:#f92672">==</span><span style="color:#a6e22e">c</span>);<span style="color:#75715e">//结果为真
+</span></span></span></code></pre></div><p>关于运算符的先后顺序，就先记住</p>
+<h3 id="-算术运算符-----比较运算符-赋值运算符">！&gt; 算术运算符 &gt; &amp;&amp; &gt; || &gt;比较运算符&gt; 赋值运算符<a hidden class="anchor" aria-hidden="true" href="#-算术运算符-----比较运算符-赋值运算符">#</a></h3>
+<p>所以在上面的代码中,要加上括号</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://chaos502.github.io/posts/hello-world/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>第一篇博客w</span>
+  </a>
+</nav>
+
+  </footer><div class="comments-title" id="tw-comment-title">
+    <p class="x-comments-title"></p>
+    <p style="font-size: 1rem"></p>
+</div>
+<div id="tw-comment"></div>
+<script>
+    const getStoredTheme = () => localStorage.getItem("pref-theme") === "dark" ? "dark" : "light";
+    const setGiscusTheme = () => {
+        const sendMessage = (message) => {
+            const iframe = document.querySelector('iframe.giscus-frame');
+            if (iframe) {
+                iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+            }
+        }
+        sendMessage({ setConfig: { theme: getStoredTheme() } })
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const giscusAttributes = {
+            "src": "https://giscus.app/client.js",
+            "data-repo": "chaos502\/chaos502blog",
+            "data-repo-id": "R_kgDOOsH1cQ",
+            "data-category": "General",
+            "data-category-id": "DIC_kwDOOsH1cc4CqTS4",
+            "data-mapping": "pathname",
+            "data-strict": "0",
+            "data-reactions-enabled": "1",
+            "data-emit-metadata": "0",
+            "data-input-position": "top",
+            "data-theme": getStoredTheme(),
+            "data-lang": "zh-CN",
+            "data-loading": "lazy",
+            "crossorigin": "anonymous",
+            "async": "",
+        };
+
+        const giscusScript = document.createElement("script");
+        Object.entries(giscusAttributes).forEach(
+            ([key, value]) => giscusScript.setAttribute(key, value));
+        document.querySelector("#tw-comment").appendChild(giscusScript);
+
+        const themeSwitcher = document.querySelector("#theme-toggle");
+        if (themeSwitcher) {
+            themeSwitcher.addEventListener("click", setGiscusTheme);
+        }
+        const themeFloatSwitcher = document.querySelector("#theme-toggle-float");
+        if (themeFloatSwitcher) {
+            themeFloatSwitcher.addEventListener("click", setGiscusTheme);
+        }
+    });
+</script>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://chaos502.github.io/">My Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
