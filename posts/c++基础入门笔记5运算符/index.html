@@ -325,10 +325,40 @@ cout&lt;&lt;a;//得到12
         </svg>
       </span>
     </h1>
-    <div class="post-meta"><span title='2025-05-18 00:00:00 +0000 UTC'>2025-05-18</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;chaos502
+    <div class="post-meta"><span title='2025-05-18 00:00:00 +0000 UTC'>YYYY-MM-DD</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;chaos502
 
 </div>
-  </header> 
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e7%ae%97%e6%95%b0%e8%bf%90%e7%ae%97%e7%ac%a6" aria-label="算数运算符">算数运算符</a></li>
+                <li>
+                    <a href="#1%e5%8a%a0%e5%87%8f%e4%b9%98%e9%99%a4%e8%bf%90%e8%a1%8c%e7%ac%a6" aria-label="1.加减乘除运行符">1.加减乘除运行符</a></li>
+                <li>
+                    <a href="#2%e5%8f%96%e6%a8%a1%e8%bf%90%e7%ae%97-" aria-label="2.取模运算 %">2.取模运算 %</a></li>
+                <li>
+                    <a href="#3%e9%80%92%e5%a2%9e%e8%bf%90%e7%ae%97%e7%ac%a6" aria-label="3.递增运算符">3.递增运算符</a></li>
+                <li>
+                    <a href="#4%e8%b5%8b%e5%80%bc%e8%bf%90%e7%ae%97%e7%ac%a6" aria-label="4.赋值运算符">4.赋值运算符</a></li>
+                <li>
+                    <a href="#%e6%b3%a8%e6%84%8f%e5%ae%83%e7%9a%84%e8%bf%90%e7%ae%97%e6%96%b9%e5%bc%8f%e6%98%af%e4%bb%8e%e5%8f%b3%e5%88%b0%e5%b7%a6" aria-label="注意它的运算方式是从右到左！">注意它的运算方式是从右到左！</a></li>
+                <li>
+                    <a href="#5%e6%af%94%e8%be%83%e8%bf%90%e7%ae%97%e7%ac%a6" aria-label="5.比较运算符">5.比较运算符</a></li>
+                <li>
+                    <a href="#6%e9%80%bb%e8%be%91%e8%bf%90%e7%ae%97%e7%ac%a6" aria-label="6.逻辑运算符">6.逻辑运算符</a></li>
+                <li>
+                    <a href="#-%e7%ae%97%e6%9c%af%e8%bf%90%e7%ae%97%e7%ac%a6-----%e6%af%94%e8%be%83%e8%bf%90%e7%ae%97%e7%ac%a6-%e8%b5%8b%e5%80%bc%e8%bf%90%e7%ae%97%e7%ac%a6" aria-label="！&gt; 算术运算符 &gt; &amp;&amp; &gt; || &gt;比较运算符&gt; 赋值运算符">！&gt; 算术运算符 &gt; &amp;&amp; &gt; || &gt;比较运算符&gt; 赋值运算符</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content"><h3 id="算数运算符">算数运算符<a hidden class="anchor" aria-hidden="true" href="#算数运算符">#</a></h3>
 <p><img loading="lazy" src="https://i-blog.csdnimg.cn/blog_migrate/30d0c05a13a07158df3b585f5ff96f99.png"></p>
 <h3 id="1加减乘除运行符">1.加减乘除运行符<a hidden class="anchor" aria-hidden="true" href="#1加减乘除运行符">#</a></h3>
@@ -555,6 +585,53 @@ cout&lt;&lt;a;//得到12
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 
