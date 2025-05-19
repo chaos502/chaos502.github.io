@@ -177,5 +177,14 @@
       <content:encoded><![CDATA[<p>这是我的第一篇博客文章！</p>
 ]]></content:encoded>
     </item>
+    <item>
+      <title>Hugo &#43; PaperMod &#43; Github Pages 搭建一个完善的个人博客</title>
+      <link>https://chaos502.github.io/posts/githubpages&#43;hugo&#43;papermod/</link>
+      <pubDate>Sun, 04 Aug 2024 03:25:53 +0800</pubDate>
+      <guid>https://chaos502.github.io/posts/githubpages&#43;hugo&#43;papermod/</guid>
+      <description>&lt;p&gt;搭建历程&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>搭建历程</p>
+]]></content:encoded>
+    </item>
   </channel>
 </rss>
