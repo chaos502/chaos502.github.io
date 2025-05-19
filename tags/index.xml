@@ -5,7 +5,29 @@
     <link>https://chaos502.github.io/tags/</link>
     <description>Recent content in Tags on My Blog</description>
     <generator>Hugo -- 0.147.3</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 18 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chaos502.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://chaos502.github.io/tags/c&#43;&#43;/</link>
+      <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chaos502.github.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>编程</title>
+      <link>https://chaos502.github.io/tags/%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chaos502.github.io/tags/%E7%BC%96%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>运算符</title>
+      <link>https://chaos502.github.io/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chaos502.github.io/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
